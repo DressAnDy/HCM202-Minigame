@@ -314,6 +314,8 @@ body::after {
   text-align: left;
   cursor: pointer;
   font-size: 0.98rem;
+  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease,
+    box-shadow 0.16s ease;
 }
 
 .option-btn:hover:not([disabled]) {
@@ -333,10 +335,29 @@ body::after {
   color: #7f1d1d;
 }
 
+.option-btn:disabled {
+  cursor: default;
+}
+
+.option-btn.correct:disabled {
+  border-color: #15803d;
+  background: #dcfce7;
+  color: #14532d;
+  opacity: 1;
+}
+
+.option-btn.wrong:disabled {
+  border-color: #b91c1c;
+  background: #fee2e2;
+  color: #7f1d1d;
+  opacity: 0.88;
+}
+
 .feedback {
   min-height: 22px;
   margin: 12px 0 2px;
   font-weight: 600;
+  transition: opacity 0.14s ease;
 }
 
 .actions {

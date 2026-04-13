@@ -2,264 +2,283 @@ import type { MilestoneStage } from "../types/quiz";
 
 export const stages = JSON.parse(`[
   {
-    "yearLabel": "1911-",
-    "periodLabel": "Trước 5-6-1911",
-    "milestone": "Hình thành lòng yêu nước và chí hướng tìm một con đường cứu nước mới cho dân tộc.",
-    "title": "Thời kỳ trước 5-6-1911",
-    "description": "Hình thành tư tưởng yêu nước và chí hướng tìm con đường cứu nước mới từ thực tiễn mất nước và truyền thống dân tộc.",
-    "detailContent": "Giai đoạn này là nền móng tư tưởng ban đầu của Người: lòng yêu nước, thương dân, nhận thức sâu sắc nỗi đau mất nước và khát vọng tìm một con đường cứu nước mới phù hợp thời đại.",
-    "imageSrc": "/images/hanh-trinh.svg",
-    "imageAlt": "Minh họa hành trình tư tưởng Hồ Chí Minh giai đoạn đầu",
+    "yearLabel": "<1911",
+    "periodLabel": "Trước năm 1911",
+    "milestone": "Hình thành tư tưởng yêu nước và chí hướng tìm đường cứu nước mới.",
+    "title": "Thời kỳ trước năm 1911",
+    "description": "Tiếp thu truyền thống quê hương, gia đình và dân tộc; sớm có tư tưởng yêu nước và thể hiện trong hoạt động thực tiễn trước khi ra đi.",
+    "detailContent": "Nghệ An là vùng đất giàu truyền thống yêu nước. Hồ Chí Minh (khi nhỏ Nguyễn Sinh Cung, sau Nguyễn Tất Thành), sinh 19/5/1890, chịu ảnh hưởng sâu sắc của cụ Nguyễn Sinh Sắc về tinh thần yêu nước, thương dân và nhân cách, và của cụ Hoàng Thị Loan về đức tính nhân hậu, tần tảo. Người tiếp thu truyền thống tốt đẹp, học với các túc nho, tiếp xúc sách báo tiến bộ ở Vinh và Huế, hiểu rõ cảnh nước nhà bị đô hộ. Người tham gia phong trào chống thuế ở Trung Kỳ (1908), dạy ở Trường Dục Thanh, Phan Thiết (1910) với tâm huyết truyền cho học sinh lòng yêu nước. Ngày 5/6/1911, Người ra nước ngoài tìm con đường cứu nước, cứu dân.",
+    "imageSrc": "/images/bh.jpg",
+    "imageAlt": "Bến Nhà Rồng (Sài Gòn) — nơi Nguyễn Tất Thành ra đi tìm đường cứu nước (5/6/1911)",
     "questions": [
       {
-        "prompt": "Nội dung cốt lõi của giai đoạn này là gì?",
+        "prompt": "Nội dung cốt lõi của thời kỳ trước năm 1911 là gì?",
         "options": [
-          "Hình thành lòng yêu nước sâu sắc và quyết tâm tìm đường cứu nước mới.",
-          "Đã hoàn thiện toàn bộ hệ thống tư tưởng cách mạng Việt Nam.",
-          "Đã trực tiếp lãnh đạo Tổng khởi nghĩa toàn quốc."
+          "Đã hoàn thiện hệ thống tư tưởng Mác – Lênin và lãnh đạo toàn diện cách mạng Việt Nam.",
+          "Tiếp thu truyền thống quê hương, gia đình và dân tộc để hình thành tư tưởng yêu nước và chí hướng tìm đường cứu nước mới.",
+          "Trực tiếp chủ trì thành lập Đảng Cộng sản Việt Nam và ban hành Cương lĩnh chính trị đầu tiên.",
+          "Tập trung xây dựng chủ nghĩa xã hội ở miền Bắc và hoàn thành thống nhất đất nước."
         ],
-        "answer": 0,
-        "explanation": "Đúng. Giai đoạn này đặt nền tảng tinh thần yêu nước, thương dân và ý chí tìm con đường mới cho dân tộc."
+        "answer": 1,
+        "explanation": "Đúng. Đây là giai đoạn nền móng: hình thành lòng yêu nước, nhận thức thực tiễn đất nước và định hướng tìm con đường cứu nước phù hợp thời đại."
       },
       {
-        "prompt": "Trong giai đoạn này, tinh thần yêu nước của Người gắn liền với thực tiễn nào?",
+        "prompt": "Hồ Chí Minh sinh ngày tháng năm nào?",
         "options": [
-          "Thực tiễn mất nước và nỗi đau của nhân dân dưới ách thực dân.",
-          "Thực tiễn đã hoàn thành công nghiệp hóa hiện đại hóa toàn diện.",
-          "Thực tiễn không còn mâu thuẫn dân tộc trong xã hội."
+          "2/9/1945",
+          "19/5/1890",
+          "5/6/1911",
+          "28/1/1941"
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Tư tưởng yêu nước của Người bắt nguồn từ thực tiễn đất nước và cuộc sống nhân dân."
+        "answer": 1,
+        "explanation": "Chính xác. Người sinh ngày 19/5/1890 tại làng Kim Liên, xã Nam Đàn, tỉnh Nghệ An (nay là tỉnh Nghệ An)."
       },
       {
-        "prompt": "Chí hướng “tìm đường cứu nước mới” thể hiện điều gì?",
+        "prompt": "Một biểu hiện tiêu biểu của tư tưởng yêu nước trong hoạt động thực tiễn trước khi Người ra đi là gì?",
         "options": [
-          "Quyết tâm tìm con đường phù hợp thời đại để giải phóng dân tộc.",
-          "Chấp nhận mãi tình trạng lệ thuộc để ổn định xã hội.",
-          "Từ bỏ truyền thống yêu nước của dân tộc Việt Nam."
+          "Tham gia phong trào chống thuế ở Trung Kỳ (1908) và truyền cảm hứng yêu nước khi dạy học tại Trường Dục Thanh, Phan Thiết (1910).",
+          "Chủ trì Hội nghị Trung ương Đảng lần thứ VIII tại Pác Bó (1941).",
+          "Soạn thảo Cương lĩnh chính trị đầu tiên của Đảng (1930).",
+          "Đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình (1945)."
         ],
         "answer": 0,
-        "explanation": "Đúng. Đây là định hướng tư tưởng tiến bộ, hướng tới con đường cứu nước đúng đắn."
+        "explanation": "Đúng. Đây là những hoạt động gắn với thực tiễn trong nước, thể hiện tinh thần yêu nước, thương dân trước khi Người xuất dương."
       },
       {
-        "prompt": "Vai trò của truyền thống dân tộc đối với giai đoạn hình thành tư tưởng ban đầu là gì?",
+        "prompt": "Ngày 5/6/1911, Hồ Chí Minh thực hiện hành động lịch sử nào?",
         "options": [
-          "Là nguồn cảm hứng và nền tảng văn hóa cho lòng yêu nước.",
-          "Không có vai trò trong việc định hướng tư tưởng.",
-          "Chỉ mang tính hình thức, không ảnh hưởng đến hành động."
+          "Thành lập Mặt trận Việt Minh.",
+          "Ra Lời kêu gọi toàn quốc kháng chiến.",
+          "Ra đi từ bến Nhà Rồng, bắt đầu hành trình tìm đường cứu nước ở nước ngoài.",
+          "Tham gia Đại hội Tours và gia nhập Quốc tế Cộng sản."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Truyền thống yêu nước, chống ngoại xâm là nền tảng tinh thần quan trọng."
+        "answer": 2,
+        "explanation": "Chính xác. Ngày 5/6/1911 đánh dấu bước khởi đầu hành trình ra thế giới để tìm con đường cứu nước, cứu dân."
       }
     ]
   },
   {
-    "yearLabel": "1911",
-    "periodLabel": "6-6-1911 đến 30-12-1920",
-    "milestone": "Ngày 5-6-1911, Người ra đi tìm đường cứu nước và đến năm 1920 xác định con đường cách mạng vô sản.",
-    "title": "Thời kỳ 6-6-1911 đến 30-12-1920",
-    "description": "Người ra đi tìm đường cứu nước (năm 1911), khảo nghiệm nhiều con đường và đến với chủ nghĩa Mác - Lênin.",
-    "detailContent": "Từ thực tiễn nhiều quốc gia và phong trào, Người từng bước nhận ra con đường giải phóng dân tộc đúng đắn. Năm 1920 là bước ngoặt tư tưởng quan trọng khi lựa chọn con đường cách mạng vô sản.",
-    "imageSrc": "/images/hanh-trinh.svg",
-    "imageAlt": "Minh họa hành trình tìm đường cứu nước giai đoạn 1911 đến 1920",
+    "yearLabel": "1911–20",
+    "periodLabel": "1911 – 1920",
+    "milestone": "Hình thành tư tưởng cứu nước, giải phóng dân tộc theo con đường cách mạng vô sản.",
+    "title": "Thời kỳ 1911 – 1920",
+    "description": "Xuất dương khảo sát thế giới, đấu tranh trên diễn đàn quốc tế; đến với chủ nghĩa Mác – Lênin và bước ngoặt tại Đại hội Tours (1920).",
+    "detailContent": "Trước cảnh nước mất chủ quyền, Nguyễn Tất Thành xuống bến Nhà Rồng (5-6-1911) với tên gọi Văn Ba, làm việc trên tàu buôn Pháp để bước vào hành trình khảo sát. Từ 1911 đến 1920, Người đến nhiều nước, hòa mình vào đời sống công nhân và nhân dân thuộc địa, vừa lao động vừa học tập và hoạt động cách mạng. Năm 1919, Người gia nhập Đảng Xã hội Pháp; tháng 6-1919 gửi bản Yêu sách 8 điểm tới Hội nghị Vécxay – tuyên bố chính trị đầu tiên của nhân dân An Nam trên diễn đàn quốc tế. Mùa hè 1920, Người tiếp cận Luận cương về vấn đề dân tộc và thuộc địa của Lênin, tìm thấy con đường giải phóng dân tộc gắn với cách mạng vô sản. Tháng 12-1920, Người bỏ phiếu tán thành gia nhập Quốc tế Cộng sản và tham gia thành lập Đảng Cộng sản Pháp – bước ngoặt từ người yêu nước tiến bộ đến chiến sĩ xã hội chủ nghĩa.",
+    "imageSrc": "/images/tau2.jpg",
+    "imageAlt": "Nguyễn Tất Thành trên tàu buôn Pháp — bước đầu hành trình xuất dương tìm đường cứu nước (1911–1920)",
     "questions": [
       {
-        "prompt": "Sự kiện nào đánh dấu bước chuyển quan trọng sang con đường cách mạng vô sản?",
+        "prompt": "Sự kiện nào được coi là bước ngoặt quan trọng đưa Người đến với con đường cách mạng vô sản?",
         "options": [
-          "Tham gia Đại hội Tours (1920), tán thành Quốc tế Cộng sản.",
-          "Trở về Pác Bó trực tiếp lãnh đạo cách mạng năm 1941.",
-          "Đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình năm 1945."
+          "Ký Hiệp định Giơnevơ năm 1954.",
+          "Cách mạng Tháng Tám thành công năm 1945.",
+          "Tháng 12-1920: tán thành gia nhập Quốc tế Cộng sản, tham gia thành lập Đảng Cộng sản Pháp.",
+          "Hội nghị Trung ương tháng 10-1930 đổi tên Đảng thành Đảng Cộng sản Đông Dương."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Năm 1920 là bước ngoặt tư tưởng, xác lập con đường giải phóng dân tộc gắn với cách mạng vô sản."
+        "answer": 2,
+        "explanation": "Đúng. Đây là mốc chuyển từ chủ nghĩa yêu nước chân chính sang lựa chọn con đường giải phóng dân tộc theo cách mạng vô sản."
       },
       {
-        "prompt": "Năm 1911, Người ra đi với mục đích chính là gì?",
+        "prompt": "Bản Yêu sách của nhân dân An Nam (tháng 6-1919) có ý nghĩa gì?",
         "options": [
-          "Tìm đường cứu nước, khảo nghiệm các con đường cứu nước.",
-          "Hoàn thiện ngay lập tức hệ thống tổ chức Đảng trong nước.",
-          "Chỉ nhằm mục đích du học mà không gắn với cứu nước."
+          "Là Hiến pháp đầu tiên của nước Việt Nam Dân chủ Cộng hòa.",
+          "Là văn kiện kết thúc toàn bộ ách thống trị của thực dân Pháp tại Việt Nam.",
+          "Là tuyên bố chính trị đầu tiên của nhân dân Việt Nam trên diễn đàn quốc tế, thể hiện khát vọng tự do, dân chủ, bình đẳng.",
+          "Là Cương lĩnh chính trị đầu tiên của Đảng Cộng sản Việt Nam."
         ],
-        "answer": 0,
-        "explanation": "Đúng. Đây là hành động xuất phát từ trách nhiệm với dân tộc và đất nước."
+        "answer": 2,
+        "explanation": "Chính xác. Yêu sách gửi Hội nghị Vécxay khẳng định quyền tối thiểu của nhân dân và mở đường cho đấu tranh trên phạm vi quốc tế."
       },
       {
-        "prompt": "Trong giai đoạn này, việc tiếp cận chủ nghĩa Mác - Lênin có ý nghĩa gì?",
+        "prompt": "Mục đích chủ yếu của Nguyễn Tất Thành khi xuất dương năm 1911 là gì?",
         "options": [
-          "Giúp xác định phương pháp và lực lượng của cách mạng giải phóng dân tộc.",
-          "Không liên quan đến vấn đề độc lập dân tộc.",
-          "Chỉ mang tính lý thuyết, không có giá trị thực tiễn."
+          "Tìm đường cứu nước, khảo sát thực tiễn thế giới và học hỏi kinh nghiệm cách mạng.",
+          "Hoàn tất ngay lập tức công cuộc công nghiệp hóa, hiện đại hóa trong nước.",
+          "Chỉ nhằm mục đích du học, không gắn với vận mệnh dân tộc.",
+          "Trực tiếp thành lập Chính phủ lâm thời sau Cách mạng Tháng Tám."
         ],
         "answer": 0,
-        "explanation": "Chính xác. Đây là cơ sở khoa học cách mạng cho con đường cứu nước mới."
+        "explanation": "Đúng. Động cơ xuất phát từ trách nhiệm với Tổ quốc: tìm hiểu bản chất thực dân và con đường giải phóng dân tộc."
       },
       {
-        "prompt": "Bước ngoặt tư tưởng năm 1920 thể hiện ở điểm nào?",
+        "prompt": "Yếu tố nào góp phần quyết định đưa Người đến với chủ nghĩa Mác – Lênin trong giai đoạn này?",
         "options": [
-          "Chuyển từ tìm hiểu sang lựa chọn con đường cách mạng vô sản một cách dứt khoát.",
-          "Từ bỏ mọi hoạt động cách mạng quốc tế.",
-          "Khẳng định không cần gắn cách mạng Việt Nam với thời đại mới."
+          "Việc ký kết hiệp ước bảo hộ với phong kiến triều Nguyễn.",
+          "Thắng lợi của Cách mạng Tháng Mười Nga (1917) và nghiên cứu luận cương của Lênin về dân tộc – thuộc địa.",
+          "Sự hỗ trợ quân sự trực tiếp của các nước phương Tây cho phong trào yêu nước Việt Nam.",
+          "Việc hoàn thành thống nhất đất nước sau Hiệp định Giơnevơ."
         ],
-        "answer": 0,
-        "explanation": "Đúng. Đây là điểm chuyển then chốt trong hành trình tư tưởng của Người."
+        "answer": 1,
+        "explanation": "Chính xác. Người nghiên cứu thực tiễn thuộc địa và các cuộc cách mạng thế giới; luận cương của Lênin giải đáp con đường giải phóng dân tộc."
       }
     ]
   },
   {
-    "yearLabel": "1920",
-    "periodLabel": "31-12-1920 đến 3-2-1930",
-    "milestone": "Chuẩn bị đầy đủ về chính trị, tư tưởng, tổ chức và đi đến sự ra đời của Đảng Cộng sản Việt Nam năm 1930.",
-    "title": "Thời kỳ 31-12-1920 đến 3-2-1930",
-    "description": "Hình thành những nội dung cơ bản của tư tưởng về cách mạng Việt Nam, chuẩn bị về chính trị, tư tưởng và tổ chức.",
-    "detailContent": "Người tích cực chuẩn bị điều kiện tư tưởng và tổ chức cho cách mạng Việt Nam. Thành quả nổi bật là sự ra đời của Đảng Cộng sản Việt Nam, tạo hạt nhân lãnh đạo thống nhất.",
-    "imageSrc": "/images/hanh-trinh.svg",
-    "imageAlt": "Minh họa giai đoạn chuẩn bị và thành lập Đảng Cộng sản Việt Nam",
+    "yearLabel": "1920–30",
+    "periodLabel": "1920 – 1930",
+    "milestone": "Hình thành những nội dung cơ bản của tư tưởng về cách mạng Việt Nam.",
+    "title": "Thời kỳ 1920 – 1930",
+    "description": "Truyền bá Mác – Lênin, tổ chức lực lượng; chuẩn bị lý luận và thực tiễn cho ra đời Đảng Cộng sản Việt Nam (1930).",
+    "detailContent": "Giai đoạn 1920 – 1930 là một trong những thời kỳ quan trọng bậc nhất: Người tập trung hình thành tư tưởng về cách mạng giải phóng dân tộc, về Đảng Cộng sản và mối quan hệ giữa cách mạng thuộc địa với cách mạng vô sản quốc tế. Các hoạt động tiêu biểu: tháng 7/1920 đọc Sơ thảo luận cương của Lênin; 1921 thành lập Hội Liên hiệp các dân tộc thuộc địa; 1922 ra báo Người Cùng Khổ (Le Paria); 1925 xuất bản “Bản án chế độ thực dân Pháp”; 1927 xuất bản “Đường Kách Mệnh” tại Quảng Châu; 1925 sáng lập Việt Nam Thanh niên Cách mạng Đồng chí Hội với tôn chỉ “Trước làm cách mạng quốc gia, sau làm cách mạng quốc tế”. Đỉnh cao: tháng 2/1930, Người chủ trì hợp nhất các tổ chức cộng sản, thành lập Đảng Cộng sản Việt Nam và thông qua Cương lĩnh chính trị đầu tiên. Giá trị cốt lõi được nhấn mạnh: “Không có gì quý hơn độc lập, tự do”.",
+    "imageSrc": "/images/tac%20pham.jpg",
+    "imageAlt": "Bìa tác phẩm Đường Kách mệnh (1927) của Nguyễn Ái Quốc — minh họa giai đoạn 1920 – 1930",
     "questions": [
       {
-        "prompt": "Thành quả có ý nghĩa quyết định của giai đoạn này là gì?",
+        "prompt": "Thành quả có ý nghĩa quyết định nhất của giai đoạn 1920 – 1930 là gì?",
         "options": [
-          "Thành lập Đảng Cộng sản Việt Nam vào ngày 3-2-1930.",
-          "Chiến dịch Điện Biên Phủ năm 1954.",
-          "Ký Hiệp định Geneva năm 1954."
+          "Chiến thắng Điện Biên Phủ (1954).",
+          "Thành lập Đảng Cộng sản Việt Nam (2/1930) và thông qua Cương lĩnh chính trị đầu tiên.",
+          "Ban hành Hiến pháp 1946.",
+          "Ký Hiệp định Paris (1973)."
         ],
-        "answer": 0,
-        "explanation": "Đúng. Sự ra đời của Đảng là kết quả tập hợp và thống nhất lực lượng cách mạng theo đường lối đúng đắn."
+        "answer": 1,
+        "explanation": "Đúng. Sự ra đời của Đảng là kết quả chuẩn bị về chính trị, tư tưởng và tổ chức, đặt nền móng lãnh đạo cách mạng Việt Nam."
       },
       {
-        "prompt": "Nội dung chuẩn bị quan trọng của giai đoạn này là gì?",
+        "prompt": "Tác phẩm “Đường Kách Mệnh” (1927) có vai trò gì?",
         "options": [
-          "Chuẩn bị về chính trị, tư tưởng và tổ chức cho cách mạng Việt Nam.",
-          "Chỉ chuẩn bị về quân sự mà không cần tư tưởng.",
-          "Không cần thống nhất lực lượng cách mạng."
+          "Là Di chúc của Chủ tịch Hồ Chí Minh.",
+          "Là văn kiện lý luận quan trọng, vạch đường lối cách mạng Việt Nam dựa trên kinh nghiệm cách mạng thế giới.",
+          "Là bản Tuyên ngôn Độc lập đọc tại Ba Đình.",
+          "Là kế hoạch kinh tế 5 năm đầu tiên của nước Việt Nam Dân chủ Cộng hòa."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Đây là những điều kiện cần thiết để hình thành Đảng và đường lối cách mạng."
+        "answer": 1,
+        "explanation": "Chính xác. Tác phẩm tổng kết lý luận và chỉ ra phương hướng cách mạng phù hợp điều kiện Việt Nam."
       },
       {
-        "prompt": "Vai trò của Đảng Cộng sản Việt Nam sau khi ra đời là gì?",
+        "prompt": "Khẩu hiệu cốt lõi được nhấn mạnh trong giai đoạn hình thành tư tưởng về cách mạng Việt Nam này là gì?",
         "options": [
-          "Là hạt nhân lãnh đạo, tập hợp lực lượng cách mạng theo đường lối đúng đắn.",
-          "Chỉ đóng vai trò tư vấn, không lãnh đạo cách mạng.",
-          "Không liên quan đến sự phát triển của phong trào cách mạng."
+          "Không có gì quý hơn độc lập, tự do.",
+          "Trước hết làm cách mạng xã hội chủ nghĩa, sau mới giải phóng dân tộc.",
+          "Từ bỏ khối đại đoàn kết dân tộc để tập trung đấu tranh giai cấp duy nhất.",
+          "Ưu tiên tuyệt đối phát triển kinh tế tư bản trước độc lập dân tộc."
         ],
         "answer": 0,
-        "explanation": "Đúng. Đảng ra đời đáp ứng yêu cầu khách quan của cách mạng Việt Nam."
+        "explanation": "Đúng. Đây là giá trị xuyên suốt thể hiện mục tiêu giải phóng dân tộc trong tư tưởng Hồ Chí Minh giai đoạn này."
       },
       {
-        "prompt": "Mối quan hệ giữa tư tưởng về cách mạng Việt Nam và thực tiễn giai đoạn này là gì?",
+        "prompt": "Tác phẩm “Bản án chế độ thực dân Pháp” (1925) chủ yếu phân tích điều gì?",
         "options": [
-          "Tư tưởng được hình thành và thử thách gắn với chuẩn bị tổ chức, chính trị.",
-          "Tư tưởng tách rời hoàn toàn khỏi thực tiễn.",
-          "Tư tưởng chỉ dừng ở khẩu hiệu, không đi vào tổ chức."
+          "Cơ cấu tổ chức Liên Hợp Quốc sau Chiến tranh thế giới thứ hai.",
+          "Đường lối xây dựng chủ nghĩa xã hội ở miền Bắc sau 1954.",
+          "Bản chất bóc lột và thủ đoạn của chủ nghĩa thực dân Pháp tại các nước thuộc địa, trong đó có Việt Nam.",
+          "Chiến lược ngoại giao của Chính phủ Việt Nam Dân chủ Cộng hòa với Mỹ."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Tư tưởng và thực tiễn cách mạng thống nhất với nhau."
+        "answer": 2,
+        "explanation": "Chính xác. Tác phẩm là công cụ tuyên truyền và lý luận mạnh mẽ lên án chế độ thực dân."
       }
     ]
   },
   {
-    "yearLabel": "1930",
-    "periodLabel": "4-2-1930 đến 28-1-1941",
-    "milestone": "Kiên định bảo vệ đường lối giải phóng dân tộc đúng đắn trong bối cảnh nhiều thử thách.",
-    "title": "Thời kỳ 4-2-1930 đến 28-1-1941",
-    "description": "Vượt qua thử thách, kiên trì giữ vững đường lối giải phóng dân tộc, phương pháp cách mạng đúng đắn và sáng tạo.",
-    "detailContent": "Trong hoàn cảnh khó khăn, tư tưởng kiên định mục tiêu độc lập dân tộc gắn liền với đường lối cách mạng đúng đắn được bảo vệ và củng cố, chuẩn bị cho bước phát triển mới.",
-    "imageSrc": "/images/hanh-trinh.svg",
-    "imageAlt": "Minh họa giai đoạn giữ vững đường lối cách mạng Việt Nam",
+    "yearLabel": "1930–41",
+    "periodLabel": "1930 – 1941",
+    "milestone": "Vượt qua thử thách, giữ vững đường lối và phương pháp cách mạng Việt Nam đúng đắn, sáng tạo.",
+    "title": "Thời kỳ 1930 – 1941",
+    "description": "Đấu tranh trong hoàn cảnh đàn áp khốc liệt và những nhận thức sai lầm; kiên trì khẳng định đường lối cách mạng dân tộc dân chủ nhân dân.",
+    "detailContent": "Giai đoạn 1930 – 1941 vừa chống kẻ thù bên ngoài (thực dân Pháp, phát xít Nhật), vừa vượt qua những hiểu lầm, giáo điều trong hàng ngũ Quốc tế Cộng sản và một bộ phận cán bộ. Cương lĩnh chính trị đầu tiên (2/1930) từng bị phê phán “hữu khuynh”; Hội nghị Trung ương 10/1930 có những quyết định cứng nhắc làm tổn thất phong trào. Hồ Chí Minh kiên trì: 1934 – 1938 học tập tại Trường Quốc tế Lenin; 6/1938 xin phép về nước hoạt động; 10/1938 sang Trung Quốc; cuối 1/1941 về Tổ quốc tại Pác Bó (28/1/1941). Người hoàn chỉnh “Con đường giải phóng”, chủ trì Hội nghị Trung ương VIII (5/1941) tại Pác Bó: đặt nhiệm vụ giải phóng dân tộc lên hàng đầu, thành lập Mặt trận Việt Minh, tạm gác khẩu hiệu ruộng đất phù hợp thời cuộc. Đường lối sáng tạo của Người được khẳng định, mở đường cho thắng lợi Cách mạng Tháng Tám.",
+    "imageSrc": "/images/dai-hoi1.jpg",
+    "imageAlt": "Ảnh tư liệu: Hồ Chí Minh trong không khí đại hội, thanh niên vỗ tay — minh họa giai đoạn 1930 – 1941",
     "questions": [
       {
-        "prompt": "Ý nghĩa trọng tâm của giai đoạn này là gì?",
+        "prompt": "Nội dung trọng tâm của thời kỳ 1930 – 1941 là gì?",
         "options": [
-          "Củng cố và bảo vệ đường lối cách mạng Việt Nam trong hoàn cảnh khó khăn.",
-          "Đã hoàn thành mục tiêu thống nhất đất nước ngay trong giai đoạn này.",
-          "Không còn cần vai trò lãnh đạo của Đảng."
+          "Hoàn thành xây dựng cơ bản chủ nghĩa xã hội trên phạm vi cả nước.",
+          "Vượt qua thử thách, giữ vững đường lối và phương pháp cách mạng Việt Nam đúng đắn, sáng tạo.",
+          "Ký kết Hiệp định Giơnevơ và chia cắt đất nước.",
+          "Ra đời nước Cộng hòa Xã hội Chủ nghĩa Việt Nam thống nhất."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Tinh thần kiên định đường lối là yếu tố bảo đảm cho thắng lợi ở các giai đoạn tiếp theo."
+        "answer": 1,
+        "explanation": "Đúng. Giai đoạn này thử thách gay gắt nhưng khẳng định đường lối cách mạng dân tộc dân chủ nhân dân của Người."
       },
       {
-        "prompt": "Trong giai đoạn này, “thử thách” chủ yếu đòi hỏi điều gì?",
+        "prompt": "Hồ Chí Minh về nước, đến hang Pác Bó (Cao Bằng) vào thời điểm nào?",
         "options": [
-          "Bản lĩnh kiên định đường lối và phương pháp cách mạng đúng đắn.",
-          "Từ bỏ mục tiêu độc lập dân tộc để dễ dàng đối thoại.",
-          "Giảm vai trò tổ chức Đảng trong đấu tranh."
+          "5/6/1911",
+          "2/9/1945",
+          "28/1/1941",
+          "19/5/1890"
         ],
-        "answer": 0,
-        "explanation": "Đúng. Thử thách khách quan đòi hỏi sự kiên định và sáng tạo trong lãnh đạo."
+        "answer": 2,
+        "explanation": "Chính xác. Sau gần 30 năm xa Tổ quốc, Người về nước cuối tháng 1/1941, mở giai đoạn lãnh đạo trực tiếp cách mạng trong nước."
       },
       {
-        "prompt": "Khái niệm “phương pháp cách mạng đúng đắn” gắn với nội dung nào?",
+        "prompt": "Hội nghị Trung ương Đảng lần thứ VIII (5/1941) tại Pác Bó do Hồ Chí Minh chủ trì đặt nhiệm vụ chiến lược nào lên hàng đầu?",
         "options": [
-          "Kết hợp đúng mức các mặt đấu tranh, bảo đảm mục tiêu giải phóng dân tộc.",
-          "Chỉ dùng một hình thức đấu tranh duy nhất trong mọi hoàn cảnh.",
-          "Không cần dựa trên thực tiễn cách mạng Việt Nam."
+          "Cải cách ruộng đất triệt để ngay trong lúc đó.",
+          "Giải phóng dân tộc, đoàn kết rộng rãi các lực lượng trong Mặt trận Việt Minh, tạm gác khẩu hiệu ruộng đất phù hợp thời cuộc.",
+          "Ưu tiên xây dựng nền công nghiệp nặng trước nhiệm vụ dân tộc.",
+          "Từ bỏ đấu tranh vũ trang, chỉ dùng đấu tranh nghị viện."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Phương pháp đúng đắn là điều kiện để đường lối phát huy hiệu quả."
+        "answer": 1,
+        "explanation": "Đúng. Hội nghị xác định quyền lợi dân tộc lên trên hết, chuẩn bị lực lượng và khối đại đoàn kết cho tổng khởi nghĩa."
       },
       {
-        "prompt": "Giữ vững đường lối trong giai đoạn này có ý nghĩa lâu dài ra sao?",
+        "prompt": "Một trong những “thử thách” nội bộ điển hình của giai đoạn này là gì?",
         "options": [
-          "Tạo nền tảng cho thắng lợi của các giai đoạn cách mạng tiếp theo.",
-          "Chỉ có ý nghĩa ngắn hạn, không ảnh hưởng tương lai.",
-          "Làm chậm tiến trình cách mạng của dân tộc."
+          "Sự đồng thuận hoàn toàn ngay từ đầu với mọi nghị quyết của Quốc tế Cộng sản.",
+          "Cương lĩnh chính trị đầu tiên (1930) bị phê phán “hữu khuynh”, một số chủ trương cứng nhắc gây tổn thất phong trào.",
+          "Việc từ bỏ hoàn toàn chủ nghĩa yêu nước để theo mô hình phương Tây.",
+          "Sự rút lui hoàn toàn của Người khỏi hoạt động cách mạng quốc tế."
         ],
-        "answer": 0,
-        "explanation": "Đúng. Kiên định đường lối là yếu tố then chốt để vượt qua khó khăn."
+        "answer": 1,
+        "explanation": "Chính xác. Giai đoạn có mâu thuẫn nhận thức và áp lực giáo điều; Người kiên trì vận dụng sáng tạo chủ nghĩa Mác – Lênin vào thực tiễn Việt Nam."
       }
     ]
   },
   {
-    "yearLabel": "1941",
-    "periodLabel": "29-1-1941 đến 2-9-1969",
-    "milestone": "Tư tưởng Hồ Chí Minh tiếp tục phát triển toàn diện, trực tiếp soi đường cho cách mạng Việt Nam.",
-    "title": "Thời kỳ 29-1-1941 đến 2-9-1969",
-    "description": "Tư tưởng Hồ Chí Minh tiếp tục phát triển, soi đường cho cách mạng Việt Nam qua đấu tranh giành độc lập và xây dựng đất nước.",
-    "detailContent": "Đây là giai đoạn tư tưởng Hồ Chí Minh được kiểm chứng và phát triển toàn diện trong thực tiễn lãnh đạo cách mạng, trở thành nền tảng tư tưởng và kim chỉ nam cho sự nghiệp cách mạng Việt Nam.",
-    "imageSrc": "/images/hanh-trinh.svg",
-    "imageAlt": "Minh họa giai đoạn tư tưởng Hồ Chí Minh phát triển toàn diện",
+    "yearLabel": "1941–69",
+    "periodLabel": "1941 – 1969",
+    "milestone": "Tư tưởng Hồ Chí Minh tiếp tục phát triển, soi đường cho sự nghiệp cách mạng của Đảng và nhân dân ta.",
+    "title": "Thời kỳ 1941 – 1969",
+    "description": "Từ thành lập Việt Minh, khởi nghĩa giành chính quyền, xây dựng và bảo vệ Tổ quốc, đến hoàn thiện quan điểm về độc lập dân tộc gắn với tiến bộ xã hội.",
+    "detailContent": "Giai đoạn này, tư tưởng Hồ Chí Minh và đường lối của Đảng cơ bản thống nhất, ngày càng được làm sáng tỏ trong thực tiễn. Ngày 19/5/1941, Người sáng lập Mặt trận Việt Minh; 22/12/1944 sáng lập Đội Việt Nam Tuyên truyền Giải phóng quân. Tháng Tám 1945: Lời kêu gọi tổng khởi nghĩa, giành chính quyền. 2/9/1945: Tuyên ngôn Độc lập khai sinh nước Việt Nam Dân chủ Cộng hòa, mở thời đại độc lập dân tộc gắn với chủ nghĩa xã hội. Người lãnh đạo kháng chiến chống Pháp, chống Mỹ, đồng thời hoàn thiện hệ thống quan điểm trên các lĩnh vực. 17/7/1966: Lời kêu gọi với chân lý “Không có gì quý hơn độc lập, tự do”. Di chúc kết tinh tư tưởng, đạo đức, phong cách Hồ Chí Minh – kim chỉ nam lâu dài cho Đảng và dân tộc.",
+    "imageSrc": "/images/21769fd2eda385d66a00e0529f915b9c.jpg",
+    "imageAlt": "Hồ Chí Minh đọc Tuyên ngôn Độc lập, cờ đỏ sao vàng và cảnh quần chúng tại Quảng trường Ba Đình — minh họa giai đoạn 1941 – 1969",
     "questions": [
       {
-        "prompt": "Điểm nổi bật của giai đoạn này là gì?",
+        "prompt": "Mặt trận Việt Minh được Hồ Chí Minh sáng lập vào ngày tháng năm nào?",
         "options": [
-          "Tư tưởng Hồ Chí Minh phát triển toàn diện, dẫn dắt sự nghiệp cách mạng của Đảng và nhân dân.",
-          "Chỉ tập trung hoạt động ở nước ngoài, chưa gắn với thực tiễn trong nước.",
-          "Tư tưởng không còn ảnh hưởng đến đường lối cách mạng."
+          "22/12/1944",
+          "2/9/1945",
+          "19/5/1941",
+          "19/12/1946"
         ],
-        "answer": 0,
-        "explanation": "Đúng. Đây là giai đoạn tư tưởng Hồ Chí Minh tỏa sáng trong thực tiễn lãnh đạo cách mạng và xây dựng quốc gia."
+        "answer": 2,
+        "explanation": "Đúng. Ngày 19/5/1941 đánh dấu bước phát triển quan trọng của khối đại đoàn kết dân tộc chuẩn bị khởi nghĩa giành chính quyền."
       },
       {
-        "prompt": "Tư tưởng Hồ Chí Minh giai đoạn này gắn chặt với thực tiễn nào?",
+        "prompt": "Bản Tuyên ngôn Độc lập đọc tại Quảng trường Ba Đình (2/9/1945) mở ra điều gì?",
         "options": [
-          "Đấu tranh giành độc lập và xây dựng đất nước theo hướng tiến bộ.",
-          "Chỉ gắn với hoạt động văn hóa nghệ thuật, không gắn chính trị.",
-          "Không còn phù hợp với yêu cầu phát triển đất nước."
+          "Kết thúc hoàn toàn mọi mâu thuẫn trong xã hội Việt Nam.",
+          "Thời đại độc lập dân tộc và chủ nghĩa xã hội: khai sinh nước Việt Nam Dân chủ Cộng hòa.",
+          "Sự ra đời của Đảng Cộng sản Việt Nam.",
+          "Chiến thắng Điện Biên Phủ chấm dứt chiến tranh Đông Dương."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Thực tiễn cách mạng là đất để tư tưởng phát triển và hoàn thiện."
+        "answer": 1,
+        "explanation": "Chính xác. Đây là mốc lịch sử khẳng định chủ quyền dân tộc và định hướng phát triển của đất nước."
       },
       {
-        "prompt": "Vai trò “soi đường” của tư tưởng Hồ Chí Minh được hiểu thế nào?",
+        "prompt": "Câu “Không có gì quý hơn độc lập, tự do” được nhấn mạnh nổi bật trong văn kiện / bối cảnh nào (theo tư liệu giai đoạn 1941 – 1969)?",
         "options": [
-          "Định hướng đúng đắn cho đường lối và các bước đi của cách mạng.",
-          "Chỉ mang tính khuyến khích tinh thần, không định hướng hành động.",
-          "Thay thế hoàn toàn vai trò của nhân dân trong cách mạng."
+          "Cương lĩnh chính trị đầu tiên năm 1930.",
+          "Bản Yêu sách gửi Hội nghị Vécxay năm 1919.",
+          "Lời kêu gọi đồng bào và chiến sĩ cả nước ngày 17/7/1966, trong cuộc kháng chiến chống Mỹ.",
+          "Hội nghị Trung ương Đảng tháng 10/1930."
         ],
-        "answer": 0,
-        "explanation": "Đúng. Tư tưởng Hồ Chí Minh có giá trị định hướng chiến lược và phương pháp."
+        "answer": 2,
+        "explanation": "Đúng. Đây là thông điệp mang tính thời đại, thể hiện quyết tâm bảo vệ độc lập dân tộc trước áp lực xâm lược."
       },
       {
-        "prompt": "Ý nghĩa của giai đoạn phát triển toàn diện đối với cách mạng Việt Nam là gì?",
+        "prompt": "Ý nghĩa tổng quát của giai đoạn 1941 – 1969 đối với tư tưởng Hồ Chí Minh là gì?",
         "options": [
-          "Tạo nền tảng tư tưởng vững chắc cho sự nghiệp đổi mới và phát triển lâu dài.",
-          "Kết thúc vai trò lý luận của cách mạng Việt Nam.",
-          "Chỉ còn giá trị trong đấu tranh giành độc lập ban đầu."
+          "Tư tưởng chỉ còn giá trị trong phạm vi đấu tranh giành độc lập ban đầu.",
+          "Tư tưởng tách khỏi đường lối của Đảng và không còn được vận dụng.",
+          "Tư tưởng tiếp tục phát triển toàn diện, soi đường cho cách mạng Việt Nam từ giành chính quyền đến xây dựng và bảo vệ Tổ quốc.",
+          "Tư tưởng dừng lại ở mức kinh nghiệm địa phương, không mang tính hệ thống."
         ],
-        "answer": 0,
-        "explanation": "Chính xác. Tư tưởng Hồ Chí Minh có giá trị xuyên suốt các thời kỳ cách mạng."
+        "answer": 2,
+        "explanation": "Chính xác. Đây là giai đoạn tư tưởng được kiểm chứng và phát triển trong lãnh đạo kháng chiến, kiến quốc và hội nhập với khát vọng hòa bình – độc lập – thống nhất."
       }
     ]
   }
 ]`) as MilestoneStage[];
-

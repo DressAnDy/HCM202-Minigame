@@ -5,6 +5,13 @@ import { stages } from "../data/stages";
 import type { MilestoneStage, QuizQuestion, StageState } from "../types/quiz";
 import { QUESTIONS_PER_MILESTONE } from "./constants";
 
+/** Khóa tạm khi đang hiện phản hồi “đúng” trước khi sang câu sau. */
+let optionPickLocked = false;
+
+let correctAdvanceTimeoutId: ReturnType<typeof setTimeout> | null = null;
+
+const CORRECT_FEEDBACK_MS = 420;
+
 function shuffleOptionOrder(length: number): number[] {
   const order = Array.from({ length }, (_, i) => i);
   for (let i = order.length - 1; i > 0; i--) {
@@ -63,6 +70,7 @@ function renderTimeline(): void {
     const node = document.createElement("button");
     node.className = "timeline-node";
     node.type = "button";
+    node.dataset.stageIndex = String(index);
     node.textContent = stage.yearLabel;
 
     const unlocked = isStageUnlocked(index);
@@ -147,6 +155,7 @@ function renderStage(): void {
     const option = question.options[originalIndex];
     const btn = document.createElement("button");
     btn.className = "option-btn";
+    btn.dataset.displayIndex = String(displayIndex);
     btn.textContent = option;
 
     if (state.lastWrong !== null && displayIndex === state.lastWrong) {
@@ -175,10 +184,54 @@ function renderStage(): void {
   updateNextMilestoneButton();
 }
 
+function syncTimelineWrongIndicators(): void {
+  timelineEl.querySelectorAll<HTMLButtonElement>(".timeline-node[data-stage-index]").forEach(
+    (node) => {
+      const idx = Number(node.dataset.stageIndex);
+      if (Number.isNaN(idx)) {
+        return;
+      }
+      const st = stageStates[idx];
+      const showWrong = !st.completed && st.lastWrong !== null;
+      node.classList.toggle("wrong", showWrong);
+    }
+  );
+}
+
+/** Chỉ cập nhật UI khi trả lời sai — tránh rebuild cả timeline + danh sách đáp án. */
+function applyWrongAttemptVisuals(): void {
+  const state = stageStates[activeStage];
+  feedbackEl.textContent =
+    "Chưa chính xác. Hãy chọn lại cho đến khi đúng để sang câu tiếp theo.";
+  syncTimelineWrongIndicators();
+  optionsEl.querySelectorAll<HTMLButtonElement>(".option-btn").forEach((btn) => {
+    btn.classList.remove("wrong");
+  });
+  if (state.lastWrong !== null) {
+    optionsEl
+      .querySelector<HTMLButtonElement>(`.option-btn[data-display-index="${state.lastWrong}"]`)
+      ?.classList.add("wrong");
+  }
+}
+
+function applyCorrectChoiceVisuals(displayIndex: number): void {
+  const state = stageStates[activeStage];
+  state.lastWrong = null;
+  feedbackEl.textContent = "Chính xác!";
+  syncTimelineWrongIndicators();
+  optionsEl.querySelectorAll<HTMLButtonElement>(".option-btn").forEach((btn) => {
+    btn.classList.remove("wrong", "correct");
+    btn.disabled = true;
+  });
+  optionsEl
+    .querySelector<HTMLButtonElement>(`.option-btn[data-display-index="${displayIndex}"]`)
+    ?.classList.add("correct");
+}
+
 function selectOption(displayIndex: number): void {
   const stage = stages[activeStage];
   const state = stageStates[activeStage];
-  if (state.completed) {
+  if (state.completed || optionPickLocked) {
     return;
   }
 
@@ -190,26 +243,43 @@ function selectOption(displayIndex: number): void {
   const pickedOriginal = order[displayIndex];
 
   if (pickedOriginal === question.answer) {
-    state.lastWrong = null;
+    optionPickLocked = true;
+    requestAnimationFrame(() => {
+      applyCorrectChoiceVisuals(displayIndex);
+    });
 
-    if (state.questionIndex < QUESTIONS_PER_MILESTONE - 1) {
-      state.questionIndex += 1;
-    } else {
-      state.completed = true;
-      if (activeStage === maxUnlockedIndex) {
-        score += 1;
-        if (maxUnlockedIndex < stages.length - 1) {
-          maxUnlockedIndex += 1;
+    if (correctAdvanceTimeoutId !== null) {
+      window.clearTimeout(correctAdvanceTimeoutId);
+    }
+    correctAdvanceTimeoutId = window.setTimeout(() => {
+      correctAdvanceTimeoutId = null;
+      if (state.questionIndex < QUESTIONS_PER_MILESTONE - 1) {
+        state.questionIndex += 1;
+      } else {
+        state.completed = true;
+        if (activeStage === maxUnlockedIndex) {
+          score += 1;
+          if (maxUnlockedIndex < stages.length - 1) {
+            maxUnlockedIndex += 1;
+          }
         }
       }
-    }
+      optionPickLocked = false;
+      renderTimeline();
+      renderStage();
+      updateResultButton();
+    }, CORRECT_FEEDBACK_MS);
+
+    updateResultButton();
+    return;
   } else {
     state.lastWrong = displayIndex;
+    requestAnimationFrame(() => {
+      applyWrongAttemptVisuals();
+    });
+    updateResultButton();
+    return;
   }
-
-  renderTimeline();
-  renderStage();
-  updateResultButton();
 }
 
 function updateNextMilestoneButton(): void {
@@ -255,6 +325,11 @@ nextMilestoneBtn.addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
+  if (correctAdvanceTimeoutId !== null) {
+    window.clearTimeout(correctAdvanceTimeoutId);
+    correctAdvanceTimeoutId = null;
+  }
+  optionPickLocked = false;
   activeStage = 0;
   score = 0;
   maxUnlockedIndex = 0;
