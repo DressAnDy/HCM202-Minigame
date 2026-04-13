@@ -1,0 +1,12 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F8F3E8"/>
+  <rect x="60" y="70" width="1080" height="580" rx="20" fill="#FFFDF8" stroke="#E5DCC7" stroke-width="4"/>
+  <path d="M180 470C360 390 500 430 640 340C780 250 900 300 1020 210" stroke="#B91C1C" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="220" cy="450" r="28" fill="#FFF" stroke="#B91C1C" stroke-width="8"/>
+  <circle cx="480" cy="405" r="28" fill="#FFF" stroke="#B91C1C" stroke-width="8"/>
+  <circle cx="700" cy="315" r="28" fill="#FFF" stroke="#B91C1C" stroke-width="8"/>
+  <circle cx="980" cy="235" r="28" fill="#FFF" stroke="#B91C1C" stroke-width="8"/>
+  <text x="105" y="170" fill="#7F1D1D" font-size="54" font-family="Segoe UI, Arial" font-weight="700">Hành Trình T° T°ßng</text>
+  <text x="105" y="230" fill="#374151" font-size="34" font-family="Segoe UI, Arial">Tìm °İng céu n°Ûc - Kiên Ënh - Phát triÃn</text>
+  <text x="105" y="620" fill="#6B7280" font-size="28" font-family="Segoe UI, Arial">Minh hÍa hÍc thu­t cho trò ch¡i timeline</text>
+</svg>

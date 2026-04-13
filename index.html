@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minigame Học Thuật - Hành Trình Tư Tưởng Hồ Chí Minh</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Hành Trình Vĩ Đại Của Lãnh Tụ Hồ Chí Minh</h1>
+        <p class="subtitle">
+          Trò chơi ôn tập theo các giai đoạn hình thành và phát triển tư tưởng
+          Hồ Chí Minh. Mỗi cột mốc có 4 câu hỏi; chỉ khi trả lời đúng cả 4 câu thì
+          cột mốc được coi là hoàn thành, khung nội dung bên phải mới hiển thị và cột
+          mốc tiếp theo mới được mở khóa.
+        </p>
+      </header>
+
+
+      <section class="timeline-card">
+        <h2>Bản đồ hành trình tư tưởng</h2>
+        <div id="timeline" class="timeline"></div>
+      </section>
+
+      <section class="game-card" id="game-card">
+        <div class="game-layout">
+          <div class="question-panel">
+            <div id="status" class="status">Đang chọn: Giai đoạn 1/5</div>
+            <h2 id="period-title"></h2>
+            <p id="period-desc" class="period-desc"></p>
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+            <p id="feedback" class="feedback"></p>
+            <div class="actions">
+              <button id="restart-btn" class="secondary">Làm lại toàn bộ</button>
+              <button id="next-milestone-btn" class="milestone-next hidden" disabled>
+                Cột mốc tiếp theo
+              </button>
+              <button id="result-btn" disabled>Xem kết luận</button>
+            </div>
+          </div>
+
+          <aside id="detail-panel" class="detail-panel locked">
+            <h3 id="detail-title">Nội dung giai đoạn</h3>
+            <p id="detail-text" class="detail-text"></p>
+            <img
+              id="detail-image"
+              class="detail-image hidden"
+              alt="Hình minh họa giai đoạn"
+            />
+          </aside>
+        </div>
+      </section>
+
+      <section id="result-card" class="result-card hidden">
+        <h2>Kết luận học thuật</h2>
+        <p id="final-text"></p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,441 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url("/lang-chu-tich-ho-chi-minh-1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(7px) brightness(0.96) contrast(1.05);
+  transform: scale(1.06);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 243, 232, 0.78) 0%,
+  );
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 18px 30px;
+}
+
+.hero {
+  background: #7f1d1d;
+  color: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.subtitle {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.principles,
+.timeline-card,
+.game-card,
+.result-card {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-card {
+  margin-top: 14px;
+}
+
+.principles h2,
+.timeline-card h2,
+.game-card h2,
+.result-card h2 {
+  margin: 0 0 10px;
+  color: #991b1b;
+}
+
+.principles ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.timeline-note {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 16px;
+  padding: 18px 16px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 2px;
+  overflow: visible;
+  min-height: 312px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #b91c1c, #dc2626, #b91c1c);
+  opacity: 0.95;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8), 0 6px 16px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-item.upper {
+  transform: translateY(-68px);
+}
+
+.timeline-item.lower {
+  transform: translateY(86px);
+}
+
+.timeline-item.lower .timeline-node {
+  margin-top: 18px;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 74px;
+  background: #9ca3af;
+  opacity: 0.75;
+}
+
+.timeline-item.upper::after {
+  bottom: -44px;
+}
+
+.timeline-item.lower::after {
+  top: -54px;
+}
+
+.timeline-node {
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  border: 4px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.16);
+}
+
+.timeline-node.locked,
+.timeline-node:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  filter: grayscale(0.25);
+  box-shadow: none;
+}
+
+.timeline-node:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-node.active {
+  border-color: #b91c1c;
+  box-shadow: 0 0 0 4px rgba(185, 28, 28, 0.18), 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.timeline-node.done {
+  border-color: #15803d;
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.timeline-node.wrong {
+  border-color: #b91c1c;
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.timeline-label {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.5;
+  max-width: 142px;
+}
+
+.status {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.period-desc {
+  margin-top: 6px;
+  line-height: 1.55;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.question-panel,
+.detail-panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 420px;
+}
+
+.detail-panel {
+  background: linear-gradient(180deg, #fff9ec 0%, #f7ebcf 100%);
+  border-color: #ecd9ab;
+}
+
+.detail-panel.locked {
+  opacity: 0.75;
+}
+
+.detail-panel h3 {
+  margin: 0 0 8px;
+  color: #7f1d1d;
+}
+
+.detail-text {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.detail-image {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #d6c398;
+  object-fit: cover;
+  background: #fff;
+}
+
+.question {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.options {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.option-btn {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+  padding: 11px 12px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.98rem;
+}
+
+.option-btn:hover:not([disabled]) {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+}
+
+.option-btn.correct {
+  border-color: #15803d;
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.option-btn.wrong {
+  border-color: #b91c1c;
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.feedback {
+  min-height: 22px;
+  margin: 12px 0 2px;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #991b1b;
+  color: #fff;
+}
+
+.actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.actions button.secondary {
+  background: #374151;
+}
+
+.actions button.milestone-next {
+  background: #b45309;
+  box-shadow: 0 0 0 rgba(245, 158, 11, 0);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+}
+
+.actions button.milestone-next:not(:disabled) {
+  filter: brightness(1.05);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.35), 0 10px 22px rgba(180, 83, 9, 0.35);
+}
+
+.actions button.milestone-next:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.actions button.milestone-next:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+  filter: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .hero,
+  .timeline-card,
+  .game-card,
+  .result-card {
+    padding: 14px;
+  }
+
+  .timeline {
+    min-height: 180px;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  .timeline-item.upper,
+  .timeline-item.lower {
+    transform: translateY(0);
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    padding-right: 12px;
+  }
+
+  .timeline {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    overflow-x: auto;
+    min-height: 210px;
+  }
+
+  .timeline-item {
+    min-width: 150px;
+  }
+
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+}
